@@ -80,7 +80,7 @@ export default function RegisterSection({
     <section className={cx('register-section', { flipped })}>
       <div className="top">
         <div className="cta-container">
-          {children}
+          {/* {children} */}
           {info}
         </div>
         <div className="images-container">
