@@ -291,13 +291,13 @@ class Layout extends React.PureComponent<LayoutProps, LayoutState> {
           </div>
           <div>
             {this.renderTallies()}
-            {/* {user.account ? (
-              <UserMenu />
-            ) : isBuildingProfile ? null : (
-              <Localized id="login-signup">
-                <LinkButton className="login" href="/login" rounded outline />
-              </Localized>
-            )} */}
+            // {user.account ? (
+            //   <UserMenu />
+            // ) : isBuildingProfile ? null : (
+            //   <Localized id="login-signup">
+            //     <LinkButton className="login" href="/login" rounded outline />
+            //   </Localized>
+            // )}
             {/*languageselection*/}
             {LOCALES.length > 1 && (
               <LocalizationSelect
