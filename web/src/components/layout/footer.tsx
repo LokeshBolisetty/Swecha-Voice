@@ -84,7 +84,7 @@ export default React.memo(() => {
           </div>
         </div>
 
-        <div id="sharing">
+        {/*<div id="sharing">
           <Localized id="share-title">
             <span className="title" />
           </Localized>
@@ -105,7 +105,7 @@ export default React.memo(() => {
               window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
           />
-        </Localized>
+        </Localized>*/}
       </div>
     </footer>
   );
