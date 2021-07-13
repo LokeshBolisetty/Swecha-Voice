@@ -27,23 +27,23 @@ export default function Landing() {
         <Localized id="help-contribute">
           <p className="main-paragraph" />
         </Localized>
-        {hasAccount ? (
-          <Localized id="speak-subtitle">
-            <LinkButton
-              rounded
-              to={URLS.SPEAK}
-              onClick={() => trackLanding('speak')}
-            />
-          </Localized>
-        ) : (
-          <Localized id="login-company" vars={{ company: 'Sodedif' }}>
-            <LinkButton
-              rounded
-              href="/login"
-              onClick={() => trackLanding('profile')}
-            />
-          </Localized>
-        )}
+        // {hasAccount ? (
+        //   <Localized id="speak-subtitle">
+        //     <LinkButton
+        //       rounded
+        //       to={URLS.SPEAK}
+        //       onClick={() => trackLanding('speak')}
+        //     />
+        //   </Localized>
+        // ) : (
+        //   <Localized id="login-company" vars={{ company: 'Sodedif' }}>
+        //     <LinkButton
+        //       rounded
+        //       href="/login"
+        //       onClick={() => trackLanding('profile')}
+        //     />
+        //   </Localized>
+        // )}
         <Localized id="profile-not-required">
           <p className="profile-not-required" />
         </Localized>
