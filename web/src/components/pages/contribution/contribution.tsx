@@ -58,7 +58,7 @@ const AccountModal = (props: ModalProps) => {
         <h2 />
       </Localized>
       <Localized id="login-signup">
-        <LinkButton
+       {/* <LinkButton
           rounded
           href="/login"
           className={getTrackClass('fs', `nudge-profile-modal`)}
@@ -70,7 +70,7 @@ const AccountModal = (props: ModalProps) => {
             }
             trackProfile('contribution-conversion-modal', locale);
           }}
-        />
+        /> */}
       </Localized>
     </Modal>
   );
