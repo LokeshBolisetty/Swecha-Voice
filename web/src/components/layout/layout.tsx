@@ -291,7 +291,7 @@ class Layout extends React.PureComponent<LayoutProps, LayoutState> {
           </div>
           <div>
             {this.renderTallies()}
-            {user.account ? (
+            {/* {user.account ? (
               <UserMenu />
             ) : isBuildingProfile ? null : (
               <Localized id="login-signup">
@@ -304,7 +304,7 @@ class Layout extends React.PureComponent<LayoutProps, LayoutState> {
                 locales={LOCALES_WITH_NAMES}
                 onChange={this.selectLocale}
               />
-            )}
+            )} */}
             <button
               id="hamburger-menu"
               onClick={this.toggleMenu}
