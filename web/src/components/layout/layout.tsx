@@ -224,13 +224,13 @@ class Layout extends React.PureComponent<LayoutProps, LayoutState> {
   };
 
   private getChallengeToken = () => {
-    return challengeTokens.find(challengeToken =>
+    return challengeTokens.find((challengeToken: any) =>
       this.props.location.search.includes(`challenge=${challengeToken}`)
     );
   };
 
   private getTeamToken = () => {
-    return challengeTeamTokens.find(challengeTeamToken =>
+    return challengeTeamTokens.find((challengeTeamToken: any) =>
       this.props.location.search.includes(`team=${challengeTeamToken}`)
     );
   };
@@ -291,13 +291,13 @@ class Layout extends React.PureComponent<LayoutProps, LayoutState> {
           </div>
           <div>
             {this.renderTallies()}
-            // {user.account ? (
-            //   <UserMenu />
-            // ) : isBuildingProfile ? null : (
-            //   <Localized id="login-signup">
-            //     <LinkButton className="login" href="/login" rounded outline />
-            //   </Localized>
-            // )}
+            {/* {user.account ? (
+               <UserMenu />
+             ) : isBuildingProfile ? null : (
+               <Localized id="login-signup">
+                 <LinkButton className="login" href="/login" rounded outline />
+               </Localized>
+             )} */}
             {/*languageselection*/}
             {LOCALES.length > 1 && (
               <LocalizationSelect
@@ -376,19 +376,19 @@ class Layout extends React.PureComponent<LayoutProps, LayoutState> {
                 </div>
               )}
 
-              // {!isBuildingProfile && (
-              //   <>
-              //     {user.account ? (
-              //       <Localized id="logout">
-              //         <LinkButton rounded href="/logout" />
-              //       </Localized>
-              //     ) : (
-              //       <Localized id="login-signup">
-              //         <LinkButton rounded href="/login" />
-              //       </Localized>
-              //     )}
-              //   </>
-              // )}
+              {/* {!isBuildingProfile && (
+                <>
+                  {user.account ? (
+                    <Localized id="logout">
+                      <LinkButton rounded href="/logout" />
+                    </Localized>
+                  ) : (
+                    <Localized id="login-signup">
+                      <LinkButton rounded href="/login" />
+                    </Localized>
+                  )}
+                </>
+              )} */}
             </div>
           </Nav>
         </div>

@@ -46,8 +46,6 @@ function Success({
   const [locale] = useLocale();
 
   const hasAccount = Boolean(account);
-  const customGoal =
-    hasAccount && account.custom_goals?.find(g => g.locale == locale);
   const goalValue = DAILY_GOALS[type][0];
 
   const killAnimation = useRef(false);
@@ -145,39 +143,39 @@ function Success({
         />
       </div>
 
-      // {hasAccount ? (
-      //   !customGoal && (
-      //     <div className="info-card">
-      //       <Localized
-      //         id="help-reach-hours-pluralized"
-      //         vars={{ hours: 10000, language: getString(locale) }}>
-      //         <p />
-      //       </Localized>
-      //       <Localized id="get-started-goals">
-      //         <LinkButton rounded href={URLS.GOALS} />
-      //       </Localized>
-      //     </div>
-      //   )
-      // ) : (
-      //   <div className="info-card">
-      //     <Localized id="profile-explanation">
-      //       <p />
-      //     </Localized>
-      //     <Localized id="login-signup">
-      //       <LinkButton
-      //         rounded
-      //         href="/login"
-      //         className={getTrackClass('fs', `nudge-profile-on-succcess`)}
-      //       />
-      //     </Localized>
-      //   </div>
-      // )}
+      {/* {hasAccount ? (
+        !customGoal && (
+          <div className="info-card">
+            <Localized
+              id="help-reach-hours-pluralized"
+              vars={{ hours: 10000, language: getString(locale) }}>
+              <p />
+            </Localized>
+            <Localized id="get-started-goals">
+              <LinkButton rounded href={URLS.GOALS} />
+            </Localized>
+          </div>
+        )
+      ) : (
+        <div className="info-card">
+          <Localized id="profile-explanation">
+            <p />
+          </Localized>
+          <Localized id="login-signup">
+            <LinkButton
+              rounded
+              href="/login"
+              className={getTrackClass('fs', `nudge-profile-on-succcess`)}
+            />
+          </Localized>
+        </div>
+      )} */}
 
-      // <ContributeMoreButton>
-      //   {type === 'speak' ? <MicIcon /> : <PlayOutlineIcon />}
-      //   <Localized id="contribute-more" vars={{ count: SET_COUNT }}>
-      //     <span />
-      //   </Localized>
+      <ContributeMoreButton>
+        {type === 'speak' ? <MicIcon /> : <PlayOutlineIcon />}
+        <Localized id="contribute-more" vars={{ count: SET_COUNT }}>
+          <span />
+        </Localized>
       </ContributeMoreButton>
 
       {hasAccount && (
