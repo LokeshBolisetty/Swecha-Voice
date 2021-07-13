@@ -45,68 +45,68 @@ export default React.memo(() => {
           </Localized>
         </ContactLink>
       </div>
-      {/*<div id="moz-links">
-        <div className="logo-container">
-          <Logo reverse />
-          <p className="license">
-            <Localized
-              id="content-license-text"
-              elems={{
-                licenseLink: (
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="https://www.mozilla.org/en-US/foundation/licensing/website-content/"
-                  />
-                ),
-              }}>
-              <span />
-            </Localized>
-          </p>
-        </div>
-        <div className="divider-bottom" />
-        <div className="links">
-          <div>
-            <LocalizedLocaleLink id="privacy" to={URLS.PRIVACY} />
-            <LocalizedLocaleLink id="terms" to={URLS.TERMS} />
-            <Localized id="cookies">
-              <a
-                target="_blank"
-                href="https://www.mozilla.org/en-US/privacy/websites/#cookies"
-                rel="noopener noreferrer"
-              />
-            </Localized>
-          </div>
-          <div className="divider-vertical"/>
-          <div>
-            <LocalizedLocaleLink id="faq" to={URLS.FAQ} />
-            <GitHubLink>GitHub</GitHubLink>
-          </div>
-        </div>
+      // <div id="moz-links">
+      //   <div className="logo-container">
+      //     <Logo reverse />
+      //     <p className="license">
+      //       <Localized
+      //         id="content-license-text"
+      //         elems={{
+      //           licenseLink: (
+      //             <a
+      //               target="_blank"
+      //               rel="noopener noreferrer"
+      //               href="https://www.mozilla.org/en-US/foundation/licensing/website-content/"
+      //             />
+      //           ),
+      //         }}>
+      //         <span />
+      //       </Localized>
+      //     </p>
+      //   </div>
+      //   <div className="divider-bottom" />
+      //   <div className="links">
+      //     <div>
+      //       <LocalizedLocaleLink id="privacy" to={URLS.PRIVACY} />
+      //       <LocalizedLocaleLink id="terms" to={URLS.TERMS} />
+      //       <Localized id="cookies">
+      //         <a
+      //           target="_blank"
+      //           href="https://www.mozilla.org/en-US/privacy/websites/#cookies"
+      //           rel="noopener noreferrer"
+      //         />
+      //       </Localized>
+      //     </div>
+      //     <div className="divider-vertical"/>
+      //     <div>
+      //       <LocalizedLocaleLink id="faq" to={URLS.FAQ} />
+      //       <GitHubLink>GitHub</GitHubLink>
+      //     </div>
+      //   </div>
 
-        <div id="sharing">
-          <Localized id="share-title">
-            <span className="title" />
-          </Localized>
+      //   <div id="sharing">
+      //     <Localized id="share-title">
+      //       <span className="title" />
+      //     </Localized>
 
-          <div className="icons">
-            <ShareButtons />
-          </div>
-        </div>
+      //     <div className="icons">
+      //       <ShareButtons />
+      //     </div>
+      //   </div>
 
-        <div id="email-subscription">
-          <SubscribeNewsletter />
-        </div>
+      //   <div id="email-subscription">
+      //     <SubscribeNewsletter />
+      //   </div>
 
-        <Localized id="back-top">
-          <TextButton
-            className="back-top"
-            onClick={() => {
-              window.scrollTo({ top: 0, behavior: 'smooth' });
-            }}
-          />
-        </Localized>
-      </div>*/}
+      //   <Localized id="back-top">
+      //     <TextButton
+      //       className="back-top"
+      //       onClick={() => {
+      //         window.scrollTo({ top: 0, behavior: 'smooth' });
+      //       }}
+      //     />
+      //   </Localized>
+      // </div>
     </footer>
   );
 });
