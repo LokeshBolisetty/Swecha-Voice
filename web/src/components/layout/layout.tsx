@@ -374,7 +374,7 @@ class Layout extends React.PureComponent<LayoutProps, LayoutState> {
                   </LocaleNavLink>
                 </div>
               )}
-              {!isBuildingProfile && (
+{/*              {!isBuildingProfile && (
                 <>
                   {user.account ? (
                     <Localized id="logout">
@@ -386,7 +386,7 @@ class Layout extends React.PureComponent<LayoutProps, LayoutState> {
                     </Localized>
                   )}
                 </>
-              )}
+              )} */}
             </div>
           </Nav>
         </div>
