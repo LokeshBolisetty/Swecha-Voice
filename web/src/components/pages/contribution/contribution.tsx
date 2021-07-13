@@ -58,19 +58,19 @@ const AccountModal = (props: ModalProps) => {
         <h2 />
       </Localized>
       <Localized id="login-signup">
-        <LinkButton
-          rounded
-          href="/login"
-          className={getTrackClass('fs', `nudge-profile-modal`)}
-          onClick={() => {
-            try {
-              sessionStorage.setItem('redirectURL', location.pathname);
-            } catch (e) {
-              console.warn(`A sessionStorage error occurred ${e.message}`);
-            }
-            trackProfile('contribution-conversion-modal', locale);
-          }}
-        />
+      // <LinkButton
+      //     rounded
+      //     href="/login"
+      //     className={getTrackClass('fs', `nudge-profile-modal`)}
+      //     onClick={() => {
+      //       try {
+      //         sessionStorage.setItem('redirectURL', location.pathname);
+      //       } catch (e) {
+      //         console.warn(`A sessionStorage error occurred ${e.message}`);
+      //       }
+      //       trackProfile('contribution-conversion-modal', locale);
+      //     }}
+      //   />
       </Localized>
     </Modal>
   );
