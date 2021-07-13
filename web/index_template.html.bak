@@ -22,8 +22,27 @@
       content="Swecha Voice is a project to help make voice recognition open to everyone. Now you can donate your voice to help us build an open-source voice database that anyone can use to make innovative apps for devices and the web."
     />
     <meta property="og:url" content="https://voice.swecha.org/" />
-    <meta name="twitter:site" content="@swecha" />
-    <meta name="twitter:creator" content="@swecha" />
+    <meta
+      property="og:image"
+      content="https://voice.mozilla.org/img/cv-social-1024x512.jpg"
+    />
+    <meta property="og:image:width" content="1024" />
+    <meta property="og:image:height" content="512" />
+    <meta
+      property="og:image"
+      content="https://voice.mozilla.org/img/cv-social-1024x512@2x.jpg"
+    />
+    <meta property="og:image:width" content="2048" />
+    <meta property="og:image:height" content="1024" />
+    <meta
+      property="og:image"
+      content="https://voice.mozilla.org/img/cv-social-1024x512@3x.jpg"
+    />
+    <meta property="og:image:width" content="3072" />
+    <meta property="og:image:height" content="1536" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@mozilla" />
+    <meta name="twitter:creator" content="@mikehenrty" />
     <link
       href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700"
       rel="stylesheet"
