@@ -45,8 +45,8 @@ export default React.memo(() => {
           </Localized>
         </ContactLink>
       </div>
-      <div id="moz-links">
-        {/*<div className="logo-container">
+      {/*<div id="moz-links">
+        <div className="logo-container">
           <Logo reverse />
           <p className="license">
             <Localized
@@ -63,7 +63,7 @@ export default React.memo(() => {
               <span />
             </Localized>
           </p>
-        </div>*/}
+        </div>
         <div className="divider-bottom" />
         <div className="links">
           <div>
@@ -84,7 +84,7 @@ export default React.memo(() => {
           </div>
         </div>
 
-        {/*<div id="sharing">
+        <div id="sharing">
           <Localized id="share-title">
             <span className="title" />
           </Localized>
@@ -105,8 +105,8 @@ export default React.memo(() => {
               window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
           />
-        </Localized>*/}
-      </div>
+        </Localized>
+      </div>*/}
     </footer>
   );
 });
