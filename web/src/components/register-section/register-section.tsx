@@ -78,10 +78,10 @@ export default function RegisterSection({
 
   return (
     <section className={cx('register-section', { flipped })}>
-      <div className="top">
+      {/*<div className="top">
         <div className="cta-container">
-          {/* {children} */}
-          {info}
+           {children} */}
+         {/* {info}
         </div>
         <div className="images-container">
           {marsSrc && <img className="mars" src={marsSrc} alt="Mars" />}
@@ -91,7 +91,7 @@ export default function RegisterSection({
             alt=""
           />
         </div>
-      </div>
+      </div>*/}
     </section>
   );
 }
