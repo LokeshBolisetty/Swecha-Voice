@@ -297,14 +297,15 @@ class Layout extends React.PureComponent<LayoutProps, LayoutState> {
               <Localized id="login-signup">
                 <LinkButton className="login" href="/login" rounded outline />
               </Localized>
-            )}
+            )} */}
+            {/*languageselection*/}
             {LOCALES.length > 1 && (
               <LocalizationSelect
                 locale={locale}
                 locales={LOCALES_WITH_NAMES}
                 onChange={this.selectLocale}
               />
-            )} */}
+            )}
             <button
               id="hamburger-menu"
               onClick={this.toggleMenu}
@@ -374,6 +375,7 @@ class Layout extends React.PureComponent<LayoutProps, LayoutState> {
                   </LocaleNavLink>
                 </div>
               )}
+{/* 
               {!isBuildingProfile && (
                 <>
                   {user.account ? (
@@ -386,7 +388,7 @@ class Layout extends React.PureComponent<LayoutProps, LayoutState> {
                     </Localized>
                   )}
                 </>
-              )}
+              )} */}
             </div>
           </Nav>
         </div>
