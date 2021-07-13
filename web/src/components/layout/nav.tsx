@@ -30,8 +30,6 @@ export default ({ children, ...props }: { [key: string]: any }) => (
       <ContributableLocaleLock>
         <LocalizedNavLink id="contribute" to={URLS.SPEAK} />
       </ContributableLocaleLock>
-      <LocalizedNavLink id="datasets" to={URLS.DATASETS} />
-      <LocalizedNavLink id="languages" to={URLS.LANGUAGES} />
       <LocalizedNavLink id="about" to={URLS.ABOUT} />
     </div>
     {children}
