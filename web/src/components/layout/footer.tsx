@@ -46,7 +46,7 @@ export default React.memo(() => {
         </ContactLink>
       </div>
       <div id="moz-links">
-        <div className="logo-container">
+        {/*<div className="logo-container">
           <Logo reverse />
           <p className="license">
             <Localized
@@ -63,7 +63,7 @@ export default React.memo(() => {
               <span />
             </Localized>
           </p>
-        </div>
+        </div>*/}
         <div className="divider-bottom" />
         <div className="links">
           <div>
