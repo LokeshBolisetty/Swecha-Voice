@@ -43,22 +43,22 @@ const AccountModal = (props: ModalProps) => {
   const [locale] = useLocale();
   return (
     <Modal {...props} innerClassName="account-modal">
-      <div className="images">
-        <img src={require('./waves.svg')} alt="Waves" className="bg" />
-        <img
-          src={require('./mars-blue.svg')}
-          alt="Mars Robot"
-          className="mars"
-        />
-      </div>
-      <Localized id="keep-track-profile">
-        <h1 />
-      </Localized>
-      <Localized id="login-to-get-started">
-        <h2 />
-      </Localized>
-      <Localized id="login-signup">
-      // <LinkButton
+      // <div className="images">
+      //   <img src={require('./waves.svg')} alt="Waves" className="bg" />
+      //   <img
+      //     src={require('./mars-blue.svg')}
+      //     alt="Mars Robot"
+      //     className="mars"
+      //   />
+      // </div>
+      // <Localized id="keep-track-profile">
+      //   <h1 />
+      // </Localized>
+      // <Localized id="login-to-get-started">
+      //   <h2 />
+      // </Localized>
+      // <Localized id="login-signup">
+      //   <LinkButton
       //     rounded
       //     href="/login"
       //     className={getTrackClass('fs', `nudge-profile-modal`)}
@@ -71,7 +71,7 @@ const AccountModal = (props: ModalProps) => {
       //       trackProfile('contribution-conversion-modal', locale);
       //     }}
       //   />
-      </Localized>
+      // </Localized>
     </Modal>
   );
 };
