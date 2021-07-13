@@ -78,20 +78,20 @@ export default function RegisterSection({
 
   return (
     <section className={cx('register-section', { flipped })}>
-      {/*<div className="top">
-        <div className="cta-container">
-           {children} */}
-         {/* {info}
-        </div>
-        <div className="images-container">
-          {marsSrc && <img className="mars" src={marsSrc} alt="Mars" />}
-          <img
-            className="screenshot"
-            src={require(`./images/${isBenefits ? 1 : 2}-${index + 1}.png`)}
-            alt=""
-          />
-        </div>
-      </div>*/}
+      // <div className="top">
+      //   <div className="cta-container">
+      //   {children}
+      //   {info}
+      //   </div>
+      //   <div className="images-container">
+      //     {marsSrc && <img className="mars" src={marsSrc} alt="Mars" />}
+      //     <img
+      //       className="screenshot"
+      //       src={require(`./images/${isBenefits ? 1 : 2}-${index + 1}.png`)}
+      //       alt=""
+      //     />
+      //   </div>
+      // </div>
     </section>
   );
 }
