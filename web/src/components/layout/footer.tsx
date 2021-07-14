@@ -44,6 +44,14 @@ export default React.memo(() => {
             <div />
           </Localized>
         </ContactLink>
+        <Localized id="back-top">
+           <TextButton
+             className="back-top"
+             onClick={() => {
+               window.scrollTo({ top: 0, behavior: 'smooth' });
+             }}
+           />
+         </Localized>
       </div>
       {/* <div id="moz-links">
          <div className="logo-container">
