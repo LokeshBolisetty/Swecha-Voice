@@ -78,6 +78,7 @@ export default class Mysql {
   }
 
   async getConnection(options: MysqlOptions): Promise<IConnection> {
+    console.log(options);
     return mysql2.createConnection(options);
   }
 
@@ -142,6 +143,7 @@ export default class Mysql {
 
     // Root gets an upgraded connection optimized for schema migration.
     const config = getConfig();
+    // console.log(config);
     opts.user = config.DB_ROOT_USER;
     opts.password = config.DB_ROOT_PASS;
     opts.multipleStatements = true;
