@@ -11,6 +11,7 @@ import SubscribeNewsletter from './subscribe-newsletter';
 import { ContactLink, DiscourseLink, GitHubLink } from '../shared/links';
 import pleromalogo from '../ui/icons/pleroma-logo.svg';
 import twitterlogo from '../ui/icons/twitter-logo.svg';
+import weblogo from '../ui/icons/web-logo.svg';
 
 import './footer.css';
 
@@ -28,6 +29,11 @@ export default React.memo(() => {
   return (
     <footer>
       <div id="help-links">
+      <a target="blank" href="https://swecha.org/">
+          <img src={weblogo} alt="weblogo" />
+          <div>Website</div>
+        </a>
+        <div className="divider" />
       <a target="blank" href="https://twitter.com/SwechaFSMI">
           <img src={twitterlogo} alt="twitterlogo" />
           <div>Twitter</div>
