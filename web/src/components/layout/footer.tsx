@@ -37,13 +37,13 @@ export default React.memo(() => {
           <img src={pleromalogo} alt="pleromalogo" />
           <div>Fsmi.social</div>
         </a>
-        <div className="divider" />
+       {/* <div className="divider" />
         <LocaleLink to={URLS.FAQ} onClick={() => trackNav('faq', locale)}>
           <SupportIcon />
           <Localized id="faq">
             <div />
           </Localized>
-        </LocaleLink>
+        </LocaleLink>*/}
         {/*<div className="divider" />
         <DiscourseLink id="discourse">
           <DiscourseIcon />
