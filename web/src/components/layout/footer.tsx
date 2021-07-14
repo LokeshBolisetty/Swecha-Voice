@@ -9,6 +9,7 @@ import { LocaleLink, useLocale } from '../locale-helpers';
 import Logo from './logo';
 import SubscribeNewsletter from './subscribe-newsletter';
 import { ContactLink, DiscourseLink, GitHubLink } from '../shared/links';
+import pleromalogo from '../ui/icons/pleroma-logo.svg';
 
 import './footer.css';
 
@@ -26,6 +27,11 @@ export default React.memo(() => {
   return (
     <footer>
       <div id="help-links">
+      <a target="blank" href="https://fsmi.social/swecha">
+          <img src={pleromalogo} alt="pleromalogo" />
+          <div>Fsmi.social</div>
+        </a>
+        <div className="divider" />
         <LocaleLink to={URLS.FAQ} onClick={() => trackNav('faq', locale)}>
           <SupportIcon />
           <Localized id="faq">
