@@ -44,11 +44,11 @@ export default React.memo(() => {
             <div />
           </Localized>
         </LocaleLink>
-        <div className="divider" />
+        {/*<div className="divider" />
         <DiscourseLink id="discourse">
           <DiscourseIcon />
           <div>Discourse</div>
-        </DiscourseLink>
+        </DiscourseLink>*/}
         {/*} <div className="divider" />
         <ContactLink>
           <ContactIcon />
