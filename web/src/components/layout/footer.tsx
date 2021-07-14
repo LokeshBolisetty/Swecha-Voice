@@ -12,6 +12,7 @@ import { ContactLink, DiscourseLink, GitHubLink } from '../shared/links';
 import pleromalogo from '../ui/icons/pleroma-logo.svg';
 import twitterlogo from '../ui/icons/twitter-logo.svg';
 import weblogo from '../ui/icons/web-logo.svg';
+import facebooklogo from '../ui/icons/facebook-logo.svg';
 
 import './footer.css';
 
@@ -43,6 +44,12 @@ export default React.memo(() => {
           <img src={pleromalogo} alt="pleromalogo" />
           <div>Fsmi.social</div>
         </a>
+        <div className="divider" />
+        <a target="blank" href="https://www.facebook.com/swechafsmi/">
+          <img src={facebooklogo} alt="facebooklogo" />
+          <div>Facebook</div>
+        </a>
+
        {/* <div className="divider" />
         <LocaleLink to={URLS.FAQ} onClick={() => trackNav('faq', locale)}>
           <SupportIcon />
