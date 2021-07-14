@@ -37,13 +37,22 @@ export default React.memo(() => {
           <DiscourseIcon />
           <div>Discourse</div>
         </DiscourseLink>
-        <div className="divider" />
+        {/*} <div className="divider" />
         <ContactLink>
           <ContactIcon />
           <Localized id="contact">
             <div />
           </Localized>
-        </ContactLink>
+        </ContactLink>*/}
+        <div className="divider" />
+        <Localized id="back-top">
+          <TextButton
+            className="back-top"
+            onClick={() => {
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
+          />
+        </Localized>
       </div>
       {/* <div id="moz-links">
          <div className="logo-container">
