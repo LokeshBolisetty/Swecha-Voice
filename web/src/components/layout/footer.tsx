@@ -37,13 +37,13 @@ export default React.memo(() => {
           <DiscourseIcon />
           <div>Discourse</div>
         </DiscourseLink>
-        <div className="divider" />
+       {/*} <div className="divider" />
         <ContactLink>
           <ContactIcon />
           <Localized id="contact">
             <div />
           </Localized>
-        </ContactLink>
+        </ContactLink>*/}
         <div className="divider" />
         <Localized id="back-top">
            <TextButton
