@@ -44,6 +44,7 @@ export default React.memo(() => {
             <div />
           </Localized>
         </ContactLink>
+        <div className="divider" />
         <Localized id="back-top">
            <TextButton
              className="back-top"
