@@ -152,6 +152,7 @@ function Success({
                 <h1>Contribute to SWECHA VOICE</h1>
                 <p>This will help us to make improvements and prioritize new features,The survey should only take a minute and your responses are completely anonymous </p>
                 <h2 id="gender" style={{fontSize: '1.5rem'}}> Gender</h2>
+                <form>
                 <select className="gender-dropdown">
                   <option>Male</option>
                   <option>female</option>
@@ -186,6 +187,7 @@ function Success({
                 <br />
                 <br />
                 <button type="button" className="button">Submit</button>
+                </form>
               </div>
             </div>
           </div>
