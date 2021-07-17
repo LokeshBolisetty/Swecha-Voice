@@ -41,7 +41,7 @@ test.skip('recording is uploaded and inserted into the db', async () => {
     uri: `http://localhost:${getConfig().SERVER_PORT}/api/v1/en/clips`,
     method: 'POST',
     headers: {
-      'Content-Type': 'audio/ogg; codecs=opus4',
+      'Content-Type': 'audio/wave; codecs=vobris',
       client_id: 'wat',
       sentence: encodeURIComponent(sentence),
     },

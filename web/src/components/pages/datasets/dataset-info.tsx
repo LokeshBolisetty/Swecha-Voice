@@ -128,7 +128,7 @@ function renderStats(stats: any, bundleState: BundleState) {
     'overall-hr-total': bundleState.totalHours.toLocaleString(),
     'cv-license': 'CC-0',
     'number-of-voices': localeStats.users.toLocaleString(),
-    'audio-format': 'MP3',
+    'audio-format': 'WAVE',
     splits: Object.entries(localeStats.splits)
       .filter(([, values]) => Object.keys(values).length > 1)
       .map(([category, values]: [string, { [key: string]: number }]) => {

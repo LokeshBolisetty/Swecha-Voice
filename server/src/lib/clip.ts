@@ -13,11 +13,6 @@ import { ClientParameterError, ServerError } from './utility';
 import Awards from './model/awards';
 import { checkGoalsAfterContribution } from './model/goals';
 import { ChallengeToken, challengeTokens } from 'common';
-
-const Transcoder = require('stream-transcoder');
-const { Converter } = require('ffmpeg-stream');
-const { Readable } = require('stream');
-
 /**
  * Clip - Responsibly for saving and serving clips.
  */
@@ -100,7 +95,7 @@ export default class Clip {
       throw new ServerError();
     }
 
-    const glob = clip.path.replace('.mp3', '');
+    const glob = clip.path.replace('.wav', '');
 
     await this.model.db.saveVote(id, client_id, isValid);
     await Awards.checkProgress(client_id, { id: clip.locale_id });
@@ -164,7 +159,7 @@ export default class Clip {
     // Where is our audio clip going to be located?
     const folder = client_id + '/';
     const filePrefix = sentenceId;
-    const clipFileName = folder + filePrefix + '.mp3';
+    const clipFileName = folder + filePrefix + '.wav';
 
     try {
       // If the folder does not exist, we create it.
@@ -180,26 +175,13 @@ export default class Clip {
         // the stream, at which point ffmpeg can no longer seek back to the beginning
         // createBufferedInputStream will create a local file and pipe data in as
         // a file, which doesn't lose the seek mechanism
-
-        const converter = new Converter();
-        const audioStream = Readable.from(request);
-
-        audioInput = converter.createBufferedInputStream();
-        audioStream.pipe(audioInput);
       }
-
-      const audioOutput = new Transcoder(audioInput)
-        .audioCodec('mp3')
-        .format('mp3')
-        .channels(1)
-        .sampleRate(32000)
-        .stream();
 
       await this.s3
         .upload({
           Bucket: getConfig().CLIP_BUCKET_NAME,
           Key: clipFileName,
-          Body: audioOutput,
+          Body: request,
         })
         .promise();
 

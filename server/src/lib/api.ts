@@ -23,8 +23,6 @@ import { FeatureType, features } from 'common';
 import { TaxonomyToken, taxonomies } from 'common';
 import { getLocaleId } from './model/db';
 
-const Transcoder = require('stream-transcoder');
-
 const PromiseRouter = require('express-promise-router');
 
 export default class API {
@@ -252,7 +250,10 @@ export default class API {
         sync: 'Y',
       },
     });
-    const clientId = await UserClient.updateBasketToken(email, JSON.parse(basketResponse).token);
+    const clientId = await UserClient.updateBasketToken(
+      email,
+      JSON.parse(basketResponse).token
+    );
     await Basket.sync(clientId, true);
 
     response.json({});
@@ -328,10 +329,9 @@ export default class API {
     const { client_id, headers, user } = request;
     console.log(`VOICE_AVATAR: saveAvatarClip() called, ${client_id}`);
     const folder = client_id;
-    const clipFileName = folder + '.mp3';
+    const clipFileName = folder + '.wav';
     try {
       // If upload was base64, make sure we decode it first.
-      let transcoder;
       if ((headers['content-type'] as string).includes('base64')) {
         // If we were given base64, we'll need to concat it all first
         // So we can decode it in the next step.
@@ -349,10 +349,6 @@ export default class API {
         passThrough.end(
           Buffer.from(Buffer.concat(chunks).toString(), 'base64')
         );
-        transcoder = new Transcoder(passThrough);
-      } else {
-        // For non-base64 uploads, we can just stream data.
-        transcoder = new Transcoder(request);
       }
 
       await Promise.all([
@@ -360,7 +356,7 @@ export default class API {
           .upload({
             Bucket: getConfig().CLIP_BUCKET_NAME,
             Key: clipFileName,
-            Body: transcoder.audioCodec('mp3').format('mp3').stream(),
+            Body: PassThrough,
           })
           .promise(),
       ]);
