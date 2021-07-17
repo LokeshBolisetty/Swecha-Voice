@@ -244,6 +244,8 @@ We have to make channges so that the data is stored loss format like ".wav" but 
 | https://code.swecha.org/AssistiveTech/swecha-voice/speech-project/-/issues/23 |
 | https://code.swecha.org/AssistiveTech/swecha-voice/speech-project/-/issues/24 |
 | https://code.swecha.org/AssistiveTech/swecha-voice/speech-project/-/issues/26 |
+| https://code.swecha.org/AssistiveTech/swecha-voice/speech-project/-/issues/27 |
+| https://code.swecha.org/AssistiveTech/swecha-voice/speech-project/-/issues/30 |
 
 ---
 
@@ -253,6 +255,8 @@ We have to make channges so that the data is stored loss format like ".wav" but 
 | ------------------------------------------------------------------------------------- |
 | https://code.swecha.org/AssistiveTech/swecha-voice/speech-project/-/merge_requests/35 |
 | https://code.swecha.org/AssistiveTech/swecha-voice/speech-project/-/merge_requests/27 |
+| https://code.swecha.org/AssistiveTech/swecha-voice/speech-project/-/merge_requests/41 |
+| https://code.swecha.org/AssistiveTech/swecha-voice/speech-project/-/merge_requests/43 |
 
 ---
 
