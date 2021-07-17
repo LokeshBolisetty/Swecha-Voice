@@ -199,3 +199,31 @@
         }
     }
 }
+.form-card{
+    box-shadow: 8px 10px 5px 0px rgba(224,207,207,0.75);
+-webkit-box-shadow: 8px 10px 5px 0px rgba(224,207,207,0.75);
+-moz-box-shadow: 8px 10px 5px 0px rgba(224,207,207,0.75);
+        border-bottom-left-radius: 35px;
+  border-top-right-radius: 35px;
+}
+
+
+
+.gender-dropdown{
+    width: 50%;
+}
+
+.age-dropdown{
+    width:50%;
+}
+
+.dialect-dropdown{
+width:50%;
+}
+
+.form-submit{
+    position: relative;
+    top:12px;
+    
+    
+}
