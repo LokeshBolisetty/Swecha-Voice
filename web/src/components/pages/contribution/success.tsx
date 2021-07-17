@@ -142,6 +142,56 @@ function Success({
           }}
         />
       </div>
+      {/*FORM ANONYMOUS */}
+      <div className="container form-container">
+        <div className="row">
+          <div className="col" />
+          <div className="col-8">
+            <div className="form-card">
+              <div className="form-body">
+                <h1>Contribute to SWECHA VOICE</h1>
+                <p>This will help us to make improvements and prioritize new features,The survey should only take a minute and your responses are completely anonymous </p>
+                <h2 id="gender" style={{fontSize: '1.5rem'}}> Gender</h2>
+                <select className="gender-dropdown">
+                  <option>Male</option>
+                  <option>female</option>
+                  <option>other</option>
+                </select>
+                <h2 id="ageGroup" style={{fontSize: '1.5rem'}}> Age group</h2>
+                <select className="gender-dropdown age-dropdown">
+                  <option>less than 10 years</option>
+                  <option>10-20 </option>
+                  <option>21-30 </option>
+                  <option>31-45</option>
+                  <option>46-60</option>
+                  <option>greater than 60 years</option>
+                </select>
+                <h2 id="dialect" style={{fontSize: '1.5rem'}}> Dialect</h2>
+                <select className="f gender-dropdown dialect-dropdown">
+                  <option>Bengali</option>
+                  <option>Bhojpuri </option>
+                  <option>Gujrati</option>
+                  <option> Haryanvi </option>
+                  <option>Kannad</option>
+                  <option>Kashmiri</option>
+                  <option>Maghi</option>
+                  <option>Malayalam</option>
+                  <option>Marathi</option>
+                  <option>Odia</option>
+                  <option>Punjabi</option>
+                  <option>Tamil</option>
+                  <option>Telugu</option>
+                  <option>other dialect</option>
+                </select>
+                <br />
+                <br />
+                <button type="button" className="button">Submit</button>
+              </div>
+            </div>
+          </div>
+          <div className="col" />
+        </div>
+      </div>
 
       {/* {hasAccount ? (
         !customGoal && (
