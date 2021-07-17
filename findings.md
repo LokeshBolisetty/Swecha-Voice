@@ -9,6 +9,7 @@
 - Checking the possibility of node environment implementation of web.
 - Finding where collected clips are stored.
 - Resolve some configuration related bugs of MYSQL.
+- Changing format of clips being stored form ".mp3" to ".wav".
 
 ---
 
@@ -214,6 +215,12 @@ console.log(process.env);
 ```
 
 After checking these logs obtained from previous changes in config files we had set the `root_pass` and `mysqlhost` in `.env-local-docker` accordingly.
+
+---
+
+## Changing format of clips data being stored from ".mp3" to ".wav".
+
+We have to make channges so that the data is stored loss format like ".wav" but its currently storing it as ".mp3" format so we find out processing that being done and then we removes the stream-coder and its functions which is processing the data to ".mp3" format and changed so it collects the raw audio and saves it in ".wav" format to extract the clips that were being stored in docker volume we created a bind mount so new incoming clips are shown in filesystem of the computer we then looked at clips they are being stored in .wav format and everything working perfectly fine.Without bind mount we are not able interact with the files in docker volume.
 
 ---
 

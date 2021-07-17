@@ -17,6 +17,8 @@ services:
     container_name: s3proxy
     networks:
       - voice-web
+    volumes:
+      - ./clips:/data
     environment:
       - S3PROXY_AUTHORIZATION=none
   web:
