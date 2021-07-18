@@ -169,19 +169,10 @@ function Success({
                 </select>
                 <h2 id="dialect" style={{fontSize: '2.0rem'}}> Dialect</h2>
                 <select className="f gender-dropdown dialect-dropdown">
-                  <option>Bengali</option>
-                  <option>Bhojpuri</option>
-                  <option>Gujrati</option>
-                  <option>Haryanvi</option>
-                  <option>Kannad</option>
-                  <option>Kashmiri</option>
-                  <option>Maghi</option>
-                  <option>Malayalam</option>
-                  <option>Marathi</option>
-                  <option>Odia</option>
-                  <option>Punjabi</option>
-                  <option>Tamil</option>
-                  <option>Telugu</option>
+                  <option>Telangana</option>
+                  <option>Central</option>
+                  <option>Coastal</option>
+                  <option>Rayalaseema</option>
                   <option>Other Dialect</option>
                 </select>
                 <button type="button" className="button">Submit</button>
