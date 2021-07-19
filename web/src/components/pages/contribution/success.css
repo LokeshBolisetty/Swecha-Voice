@@ -199,31 +199,43 @@
         }
     }
 }
+
 .form-card{
+    margin-top: 10px;
     box-shadow: 8px 10px 5px 0px rgba(224,207,207,0.75);
--webkit-box-shadow: 8px 10px 5px 0px rgba(224,207,207,0.75);
--moz-box-shadow: 8px 10px 5px 0px rgba(224,207,207,0.75);
-        border-bottom-left-radius: 35px;
-  border-top-right-radius: 35px;
+    -webkit-box-shadow: 8px 10px 5px 0px rgba(224,207,207,0.75);
+    -moz-box-shadow: 8px 10px 5px 0px rgba(224,207,207,0.75);
+    border-bottom-left-radius: 35px;
+    border-top-right-radius: 35px;
+    background-color: #24b4fc;
 }
-
-
 
 .gender-dropdown{
     width: 50%;
+    font-size: 20px;
+    background-color: #00ffff;
+    text-align-last:center;
+    margin: 10px;
 }
 
 .age-dropdown{
     width:50%;
+    font-size: 20px;
+    background-color: #00ffff;
+    text-align-last:center;
+    margin: 10px;
 }
 
 .dialect-dropdown{
-width:50%;
+    width:50%;
+    font-size: 20px;
+    background-color: #00ffff;
+    text-align-last:center;
+    margin: 10px;
 }
 
 .form-submit{
     position: relative;
-    top:12px;
-    
-    
+    top:12px;    
 }
+
