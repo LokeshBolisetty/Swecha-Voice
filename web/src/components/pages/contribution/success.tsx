@@ -57,6 +57,7 @@ function Success({
   const [gender, setGender] = useState(genders[0]);
   const handleClose = () => {
     // call the function.
+    console.log('called');
   };
   function countUp(time: number) {
     if (killAnimation.current) return;
