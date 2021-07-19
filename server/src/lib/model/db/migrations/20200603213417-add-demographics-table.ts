@@ -22,7 +22,6 @@ export const up = async function (db: any): Promise<any> {
         FOREIGN KEY (gender_id) REFERENCES genders (id),
         UNIQUE (client_id, age_id, gender_id)
       );
-
       CREATE TABLE clip_demographics (
         clip_id BIGINT(20) UNSIGNED NOT NULL PRIMARY KEY,
         demographic_id BIGINT(20) UNSIGNED NOT NULL,

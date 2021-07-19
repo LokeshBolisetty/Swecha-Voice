@@ -14,7 +14,7 @@ import { CheckIcon, MicIcon, PlayOutlineIcon } from '../../ui/icons';
 import { Button, LinkButton, TextButton } from '../../ui/ui';
 import { SET_COUNT } from './contribution';
 import { getTrackClass } from '../../../services/tracker';
-
+// import {sendDemographicData} from '../../../../../server/src/lib/model/db';
 import './success.css';
 
 const COUNT_UP_MS = 500; // should be kept in sync with .contribution-success .done transition duration
@@ -41,19 +41,24 @@ function Success({
   onReset: () => any;
 } & WithLocalizationProps) {
   const api = useAPI();
-  const account = useAccount();
 
   const [locale] = useLocale();
-
-  const hasAccount = Boolean(account);
   const goalValue = DAILY_GOALS[type][0];
 
   const killAnimation = useRef(false);
   const startedAt = useRef(null);
-
+  const ageRanges = ['10-20', '20-30', '30-40', '40-50', '50-60', '60-100'];
+  const genders = ['male', 'female', 'other'];
+  const accents = ['Telangana', 'Central', 'Coastal', 'Rayalaseema'];
   const [contributionCount, setContributionCount] = useState(null);
   const [currentCount, setCurrentCount] = useState(null);
-
+  const [age, setAge] = useState(ageRanges[0]);
+  const [accent, setAccent] = useState(accents[0]);
+  const [gender, setGender] = useState(genders[0]);
+  const handleClose = () => {
+    // call the function.
+    console.log('called');
+  };
   function countUp(time: number) {
     if (killAnimation.current) return;
     if (!startedAt.current) startedAt.current = time;
@@ -90,21 +95,13 @@ function Success({
     (100 * (contributionCount || 0)) / goalValue
   );
 
-  const ContributeMoreButton = (props: { children: React.ReactNode }) =>
-    hasAccount ? (
-      <Button
-        className="contribute-more-button"
-        rounded
-        onClick={onReset}
-        {...props}
-      />
-    ) : (
-      <TextButton
-        className="contribute-more-button secondary"
-        onClick={onReset}
-        {...props}
-      />
-    );
+  const ContributeMoreButton = (props: { children: React.ReactNode }) => (
+    <TextButton
+      className="contribute-more-button secondary"
+      onClick={onReset}
+      {...props}
+    />
+  );
 
   const goalPercentage = (
     <GoalPercentage
@@ -150,32 +147,57 @@ function Success({
             <div className="form-card">
               <div className="form-body">
                 <h1>Contribute to SWECHA VOICE</h1>
-                <p style={{margin: '5px 15px'}}>This will help us to make improvements and prioritize new features,The survey should only take a minute and your responses are completely anonymous </p>
-                <form style={{textAlign: 'center'}}>
-                <h2 id="gender" style={{fontSize: '2.0rem'}}> Gender</h2>
-                <select className="gender-dropdown">
-                  <option>Male</option>
-                  <option>Female</option>
-                  <option>Other</option>
-                </select>
-                <h2 id="ageGroup" style={{fontSize: '2.0rem'}}> Age group</h2>
-                <select className="gender-dropdown age-dropdown">
-                  <option>Less than 10 years</option>
-                  <option>10-20 </option>
-                  <option>21-30 </option>
-                  <option>31-45</option>
-                  <option>46-60</option>
-                  <option>Greater than 60 years</option>
-                </select>
-                <h2 id="dialect" style={{fontSize: '2.0rem'}}> Dialect</h2>
-                <select className="f gender-dropdown dialect-dropdown">
-                  <option>Telangana</option>
-                  <option>Central</option>
-                  <option>Coastal</option>
-                  <option>Rayalaseema</option>
-                  <option>Other Dialect</option>
-                </select>
-                <button type="button" className="button">Submit</button>
+                <p>
+                  This will help us to make improvements and prioritize new
+                  features,The survey should only take a minute and your
+                  responses are completely anonymous{' '}
+                </p>
+                <form>
+                  <h2 id="gender" style={{ fontSize: '1.5rem' }}>
+                    {' '}
+                    Gender
+                  </h2>
+                  <select
+                    value={gender}
+                    onChange={e => setGender(e.target.value)}>
+                    {genders.map(g => (
+                      <option key={g} value={g}>
+                        {g}
+                      </option>
+                    ))}
+                  </select>
+                  <h2 id="dialect" style={{ fontSize: '1.5rem' }}>
+                    {' '}
+                    Dialect
+                  </h2>
+                  <select
+                    value={accent}
+                    onChange={e => setAccent(e.target.value)}>
+                    {accents.map(d => (
+                      <option key={d} value={d}>
+                        {d}
+                      </option>
+                    ))}
+                  </select>
+                  <h2 id="ageGroup" style={{ fontSize: '1.5rem' }}>
+                    {' '}
+                    Age group
+                  </h2>
+                  <select value={age} onChange={e => setAge(e.target.value)}>
+                    {ageRanges.map(ar => (
+                      <option key={ar} value={ar}>
+                        {ar}
+                      </option>
+                    ))}
+                  </select>
+                  <br />
+                  <br />
+                  <button
+                    type="button"
+                    className="button"
+                    onSubmit={handleClose}>
+                    Submit
+                  </button>
                 </form>
               </div>
             </div>
@@ -218,12 +240,6 @@ function Success({
           <span />
         </Localized>
       </ContributeMoreButton>
-
-      {hasAccount && (
-        <Localized id="edit-profile">
-          <LocaleLink className="secondary" to={URLS.PROFILE_INFO} />
-        </Localized>
-      )}
     </div>
   );
 }

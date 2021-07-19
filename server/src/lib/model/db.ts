@@ -76,7 +76,16 @@ export async function getLocaleId(locale: string): Promise<number> {
 
   return localeIds[locale];
 }
-
+export async function sendDemographicData(
+  age: string,
+  accent: string,
+  gender: string
+): Promise<void> {
+  await getMySQLInstance().query(
+    `INSERT INTO user_data (age, accent, gender) VALUES (?, ?, ?)`,
+    [age, accent, gender]
+  );
+}
 export async function getTermIds(term_names: string[]): Promise<number[]> {
   if (!termIds) {
     const [rows] = await getMySQLInstance().query(
