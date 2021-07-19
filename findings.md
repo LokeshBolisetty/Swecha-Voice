@@ -9,7 +9,7 @@
 - Checking the possibility of node environment implementation of web.
 - Finding where collected clips are stored.
 - Resolve some configuration related bugs of MYSQL.
-- Changing format of clips being stored form ".mp3" to ".wav".
+- Changing format of clips being stored from ".mp3" to ".wav".
 
 ---
 
