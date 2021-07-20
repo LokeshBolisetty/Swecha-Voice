@@ -14,8 +14,9 @@ import { CheckIcon, MicIcon, PlayOutlineIcon } from '../../ui/icons';
 import { Button, LinkButton, TextButton } from '../../ui/ui';
 import { SET_COUNT } from './contribution';
 import { getTrackClass } from '../../../services/tracker';
-// import {sendDemographicData} from '../../../../../server/src/lib/model/db';
+//import {sendDemographicData} from '../../../../../server/src/lib/model/db';
 import './success.css';
+import axios from 'axios';
 
 const COUNT_UP_MS = 500; // should be kept in sync with .contribution-success .done transition duration
 
@@ -55,9 +56,16 @@ function Success({
   const [age, setAge] = useState(ageRanges[0]);
   const [accent, setAccent] = useState(accents[0]);
   const [gender, setGender] = useState(genders[0]);
-  const handleClose = () => {
-    // call the function.
-    console.log('called');
+
+  const data = {
+    age,
+    accent,
+    gender,
+  };
+  const handleSubmit = async (e: any) => {
+    e.preventDefault();
+    console.log(data);
+    api.sendDemographics(age, accent, gender);
   };
   function countUp(time: number) {
     if (killAnimation.current) return;
@@ -152,7 +160,7 @@ function Success({
                   features,The survey should only take a minute and your
                   responses are completely anonymous{' '}
                 </p>
-                <form>
+                <form onSubmit={handleSubmit}>
                   <h2 id="gender" style={{ fontSize: '1.5rem' }}>
                     {' '}
                     Gender
@@ -192,10 +200,7 @@ function Success({
                   </select>
                   <br />
                   <br />
-                  <button
-                    type="button"
-                    className="button"
-                    onSubmit={handleClose}>
+                  <button type="submit" className="button">
                     Submit
                   </button>
                 </form>

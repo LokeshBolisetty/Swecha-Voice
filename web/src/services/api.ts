@@ -127,7 +127,7 @@ export default class API {
         sentence_id: sentenceId,
         challenge: getChallenge(this.user),
         from_demo: fromDemo ? 'true' : 'false',
-        source: 'web'
+        source: 'web',
       },
       body: blob,
     });
@@ -176,7 +176,17 @@ export default class API {
       },
     });
   }
-
+  // test
+  sendDemographics(age: string, accent: string, gender: string): Promise<void> {
+    return this.fetch(`${API_PATH}/userData`, {
+      method: 'POST',
+      body: {
+        age,
+        accent,
+        gender,
+      },
+    });
+  }
   async fetchLanguageStats(): Promise<LanguageStats> {
     return this.fetch(`${API_PATH}/language_stats`);
   }
