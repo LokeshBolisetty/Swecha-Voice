@@ -16,7 +16,6 @@ import { SET_COUNT } from './contribution';
 import { getTrackClass } from '../../../services/tracker';
 //import {sendDemographicData} from '../../../../../server/src/lib/model/db';
 import './success.css';
-import axios from 'axios';
 
 const COUNT_UP_MS = 500; // should be kept in sync with .contribution-success .done transition duration
 
