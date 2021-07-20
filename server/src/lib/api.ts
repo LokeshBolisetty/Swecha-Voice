@@ -119,6 +119,8 @@ export default class API {
 
     router.get('/feature/:locale/:feature', this.getFeatureFlag);
     router.get('/bucket/:bucket_type/:path/:cdn', this.getPublicUrl);
+
+    // test
     router.post('/userData', this.sendDemographics);
 
     router.use('*', (request: Request, response: Response) => {
