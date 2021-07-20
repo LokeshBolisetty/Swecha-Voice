@@ -53,6 +53,13 @@ export const up = async function (db: any): Promise<any> {
         CONSTRAINT votes_ibfk_1 FOREIGN KEY (clip_id) REFERENCES clips (id),
         CONSTRAINT votes_ibfk_2 FOREIGN KEY (client_id) REFERENCES user_clients (client_id)
       );
+      CREATE TABLE user_data (
+        id int NOT NULL AUTO_INCREMENT,
+        age varchar(45) DEFAULT NULL,
+        accent varchar(45) DEFAULT NULL,
+        gender varchar(45) DEFAULT NULL,
+        PRIMARY KEY (id)
+      )
     `
   );
 };

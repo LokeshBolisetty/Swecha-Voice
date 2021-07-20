@@ -119,6 +119,7 @@ export default class API {
 
     router.get('/feature/:locale/:feature', this.getFeatureFlag);
     router.get('/bucket/:bucket_type/:path/:cdn', this.getPublicUrl);
+    router.post('/userData', this.sendDemographics);
 
     router.use('*', (request: Request, response: Response) => {
       response.sendStatus(404);
@@ -167,6 +168,15 @@ export default class API {
     response.json(await this.model.db.getRequestedLanguages());
   };
 
+  sendDemographics = async (request: Request, response: Response) => {
+    console.log('called');
+    await this.model.db.sendDemographicData(
+      request.body.age,
+      request.body.accent,
+      request.body.gender
+    );
+    response.json({});
+  };
   createLanguageRequest = async (request: Request, response: Response) => {
     await this.model.db.createLanguageRequest(
       request.body.language,
