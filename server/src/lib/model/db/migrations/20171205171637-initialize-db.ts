@@ -55,6 +55,7 @@ export const up = async function (db: any): Promise<any> {
       ); 
       CREATE TABLE user_data (
         id int NOT NULL AUTO_INCREMENT,
+        client_id CHAR(36) NOT NULL, 
         age varchar(45) DEFAULT NULL,
         accent varchar(45) DEFAULT NULL,
         gender varchar(45) DEFAULT NULL,

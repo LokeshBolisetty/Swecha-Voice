@@ -39,42 +39,6 @@ import './contribution.css';
 
 const HAS_SEEN_ACCOUNT_MODAL_KEY = 'hasSeenAccountModal2';
 
-const AccountModal = (props: ModalProps) => {
-  const [locale] = useLocale();
-  return (
-    <Modal {...props} innerClassName="account-modal">
-      {/* <div className="images">
-         <img src={require('./waves.svg')} alt="Waves" className="bg" />
-         <img
-           src={require('./mars-blue.svg')}
-           alt="Mars Robot"
-           className="mars"
-         />
-       </div>
-       <Localized id="keep-track-profile">
-         <h1 />
-       </Localized>
-       <Localized id="login-to-get-started">
-         <h2 />
-       </Localized>
-       <Localized id="login-signup">
-         <LinkButton
-           rounded
-           href="/login"
-           className={getTrackClass('fs', `nudge-profile-modal`)}
-           onClick={() => {
-             try {
-               sessionStorage.setItem('redirectURL', location.pathname);
-             } catch (e) {
-               console.warn(`A sessionStorage error occurred ${e.message}`);
-             }
-             trackProfile('contribution-conversion-modal', locale);
-           }}
-         />
-       </Localized> */}
-    </Modal>
-  );
-};
 
 export const SET_COUNT = 5;
 
@@ -306,7 +270,6 @@ class ContributionPage extends React.Component<Props, State> {
       demoMode,
     } = this.props;
     const {
-      showAccountModal,
       showReportModal,
       showShareModal,
       showShortcutsModal,
@@ -343,11 +306,6 @@ class ContributionPage extends React.Component<Props, State> {
             onRequestClose={() => this.setState({ showReportModal: false })}
             onSubmitted={onSkip}
             {...reportModalProps}
-          />
-        )}
-        {showAccountModal && (
-          <AccountModal
-            onRequestClose={() => this.setState({ showAccountModal: false })}
           />
         )}
         <div

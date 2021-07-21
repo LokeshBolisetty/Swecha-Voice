@@ -99,6 +99,7 @@ export default class DB {
   mysql: Mysql;
   schema: Schema;
   vote: VoteTable;
+  id: String;
 
   constructor() {
     this.mysql = getMySQLInstance();
@@ -107,6 +108,7 @@ export default class DB {
     this.vote = new VoteTable(this.mysql);
 
     this.schema = new Schema(this.mysql);
+    this.id = "";
   }
 
   /**
@@ -152,8 +154,8 @@ export default class DB {
     gender: string
   ): Promise<void> {
     await this.mysql.query(
-      `INSERT INTO user_data (age, accent, gender) VALUES (?, ?, ?)`,
-      [age, accent, gender]
+      `INSERT INTO user_data (client_id,age, accent, gender) VALUES (?, ?, ?, ?)`,
+      [this.id,age, accent, gender]
     );
   }
   async getSentenceCountByLocale(locales: string[]): Promise<any> {
@@ -581,6 +583,10 @@ export default class DB {
     );
   }
 
+  async setId(user_client: string) : Promise<void> {
+    this.id = user_client;
+  }
+
   async saveClip({
     client_id,
     localeId,
@@ -625,6 +631,7 @@ export default class DB {
         `,
         [insertId, client_id]
       );
+      await this.setId(client_id);
     } catch (e) {
       console.error('error saving clip', e);
     }
