@@ -318,23 +318,6 @@ class Layout extends React.PureComponent<LayoutProps, LayoutState> {
             </button>
           </div>
         </header>
-        {showStagingBanner && (
-          <div className="staging-banner">
-            You're on the staging server. Voice data is not collected here.{' '}
-            <a href={URLS.HTTP_ROOT} target="_blank" rel="noopener noreferrer">
-              Don't waste your breath.
-            </a>{' '}
-            <a
-              href={`${URLS.GITHUB_ROOT}/issues/new`}
-              rel="noopener noreferrer"
-              target="_blank">
-              Feel free to report issues.
-            </a>{' '}
-            <button onClick={() => this.setState({ showStagingBanner: false })}>
-              Close
-            </button>
-          </div>
-        )}
         <Content location={location} />
         <Footer />
         <div

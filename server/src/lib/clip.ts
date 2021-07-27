@@ -146,6 +146,8 @@ export default class Clip {
           `Missing parameter: ${sentenceId ? 'client_id' : 'sentence_id'}.`
         );
       console.log(`sent headers: ${JSON.stringify(headers)}`);
+      console.log(`debug: ${sentenceId} ${client_id}`);
+
       throw new ClientParameterError();
     }
 
